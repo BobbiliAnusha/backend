@@ -1,0 +1,95 @@
+
+GET http://localhost:3005/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFudTIzNEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IkFudUAxMjMifSwiaWF0IjoxNjU0MDYwMjc1LCJleHAiOjE2NTQwNjE0NzV9.MQw_3lnGjVfpIXEQInBIWK95Sgd9WJFjBOtpVQIWIGY
+
+
+POST http://localhost:3005/users/signup
+Content-Type: application/json
+
+{
+    "name": "Anushawal",
+    "age": 22,
+    "mobile": 9848575434,
+    "email": "Anushawal@gmail.com",
+    "password": "password123"
+}
+
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+    "email": "Anushawal@gmail.com",
+    "password": "password123"
+    
+}
+
+GET http://localhost:3002/usersdairy
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQ4NzU1MTAsImV4cCI6MTY1NDg3NjcxMH0.xRZeXDpWQaWQ96LV5km5kfz_T57wl4gq_uppE50iySM
+
+GET http://localhost:3002/usersdairy/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQ4NzU1MTAsImV4cCI6MTY1NDg3NjcxMH0.xRZeXDpWQaWQ96LV5km5kfz_T57wl4gq_uppE50iySM
+
+GET http://localhost:3001/usersdairy/12/2022-05-30
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFudXJhZGhhMjM0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQW51cmFkaGFhIn0sImlhdCI6MTY1NDUwNDgyOSwiZXhwIjoxNjU0NTEwMDI5fQ.rSswVrQ3jZ2kAg_1iJQMD7m57KYW1ArVajWS12b86Y8
+
+
+
+POST http://localhost:3001/usersdairy/7
+Content-Type:application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQ4NzY1MjZ9.Y-uTkD4GSTVue9EOupQHo27vTr3X5ZwgnCL4VS_LER0
+
+{
+    "userid":7,
+    "description":"my new day",
+    "date":"2022-04-21"
+}  
+
+PUT  http://localhost:3001/usersdairy/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6IkFudXNoYXdhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkMTIzIn0sImlhdCI6MTY1NDg4NjE5OX0.4OcSVr51Ag30tJBYYDEMPXeuK7aOzQxf5-DZEJzFNyw
+
+{   
+    "userid": 8,
+    "description": "Good the  nice Day"
+}
+
+DELETE http://localhost:3001/usersdairy/7
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFudXJhZGhhMjM0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQW51cmFkaGFhIn0sImlhdCI6MTY1NDUwNDgyOSwiZXhwIjoxNjU0NTEwMDI5fQ.rSswVrQ3jZ2kAg_1iJQMD7m57KYW1ArVajWS12b86Y8
+
+
+GET http://localhost:3001/credentials
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQ2OTA2NDZ9.uamYUmnm1YDwaoVZtg0kca50CfE2_4KwEEm_9Rp4UB8
+
+POST http://localhost:3001/credentials/5
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQ2OTA2NDZ9.uamYUmnm1YDwaoVZtg0kca50CfE2_4KwEEm_9Rp4UB8
+
+
+{  
+    "userid":5,
+    "platform": "Amazaon",
+    "email": "jyo123@gmail.com",
+    "password":"jyo123"
+}
+
+
+
+DELETE http://localhost:3001/credentials/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQxNjkwODcsImV4cCI6MTY1NDE3MDI4N30.wUGwpW4kjoCJ4dX-g0wKJPlvtxUVfayJxGx1pxvKoA0
+
+PUT  http://localhost:3001/credentials/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6IkFudXNoYXdhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkMTIzIn0sImlhdCI6MTY1NTEwMzU1Nn0.Y1lavstQ18TRl1FINZMihwM_xr6I1cb1jg95pGNXDTg
+
+{   
+    "platform": "byjuice",
+    "email": "amarnath234@gmail.com",
+    "password":"amarnath"
+}
+
+GET http://localhost:3001/credentials/2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6ImFrc2hpeWExMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJha3NoaXlhQDEyMyJ9LCJpYXQiOjE2NTQxNjkwODcsImV4cCI6MTY1NDE3MDI4N30.wUGwpW4kjoCJ4dX-g0wKJPlvtxUVfayJxGx1pxvKoA0
+
+
+GET http://localhost:3001/usersdairy/12/2022-06-01
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGV0YWlscyI6eyJlbWFpbCI6IkFudXNoYXdhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkMTIzIn0sImlhdCI6MTY1NDk1NjI3MX0.XRy8ox7gw6HPEZ1f6tzvdGC30-FI7g74kAFNzCOS1xA
